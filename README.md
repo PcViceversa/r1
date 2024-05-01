@@ -165,14 +165,57 @@ TIPOS DE BASES DE DATOS
 
 [] Ubicacion de la copia princial.
                                              !!! 01 : Memoria principal         - nivel 1 : __BASE_DE_DATO__ veloz, pero volatil.
-                                             !!! 02 : Memoria secundaria        - nivel 2 : __BASE_DE_DATO__ lenta, pero persistente.
+                                             !!! 02 : Memoria secundaria        - nivel 2 : __BASE_DE_DATO__ lenta, pero persistente. [BD-relacional]
                                              !!! 03 : almacenamiento terciario  - nivel 3 : __BASE_DE_DATO__ medio offline de cararcter externo.
                                              
 [] Numero de procesadores.
-                                             !!! 01 : 
+                                             !!! 01 : Serial : 1 solo super-procesador gestino la memoria y el disco_DB.
+                                             !!! 02 : Paralelo - memoria compartida : todos los procesadores comparten la memoria y el disco_DB.
+                                             !!! 03 : Paralelo - disco compartida   : todos los procesadores comparten el disco_DB, pero tienen su propia memoria.
+                                             !!! 04 : Paralelo - nada compartido    : cada prosesador gestiona su memoria y su disco_DB.
+                                             !!! 05 : Paralelo - algo compartida    : sistema hibrido en el que operan por ejemplo los CLUSTERS,
+                                                                                      son varias "memorias compartidas" comunicadas entre si, por buses de datos.
+
+[] Numero de sitios.
+                                             !!! Son los nodos donde se encuentran fisicamente los datos en una red.
+                                             !!! 01 Centralizada : 1 unico nodo al que deben llegar todas las solictudes.
+                                                                   !si falla el nodo todo el sistema falla !gran costo de comunicacion/aceso remoto.
+                                             !!! 02 Distribuida  : Muchos nodos tienen una parte de la __BASE_DE_DATO__.
+                                                                   !!! fragmentacion vertical, asigna a cada nodo un subconjunto de columnas. [requiere union]
+                                                                   !!! fragmentacion horizontal, asigna a cada nodo un subconjunto de filas.  [requiere union]
+                                                                   !!! replicacion, copia todo el contenido en cada nodo. [costosa de llevar a cavo eficazmente]
+                                                                   !!! hibrida, seccion no critica centralizada y secciones criticas distribuidas.
+                                             !!! 03 WEB          : Montadas sobre servicios web en abstraccion de capas sobre la aplicacion,
+                                                                   permite hacer cambos efectivos desde cada capa sin modificar codigo fuente.                
+                                             !!! 04 Federadas o sistema multiple : Divide y venceras, trabajo en conjunto de __BASE_DE_DATO__ diferentes,
+                                                                                   se requiere un DBMS que haga parecer que todas las BD son una unica entidad.
+
+PROCESO DE DISEÑO
+
+[] Lo primero es captar los requerimentos que tienen o pueden tener los clientes.
+
+[] A partir de lo anterior se debe segir en paralelo el enfoque de prosesos y el enfoque de datos.
+
+[] Solo se estudia el enfoque de datos. En esta oportunidad.
+
+PROCESO DE DISEÑO EN EL ENFOQUE DE DATOS
+
+[] Se crea el diseño conceptual.
+
+[] Se elige un DBMS.
+                     !!! por costo.
+                     !!! por estructura de datos.
+                     !!! por requeriemto funcional/no-funcional EJ: lo-que-hace/como-lo-hace = lista de todos los usuarios conectados/ejecutable solo linux y mac.
+
+[] Se elabora el diseño logico del diseño conceptual y soportado por el DBMS elegido.
+
+[] Se incorpora el diseño fisico. Es decir, aspectos adicionales como rendimeinto, ETC...
+
+[] Se implemta la __BASE_DE_DATO__ con un lenguje como SQL. 
 
 
-[] Estructura de datos para almacenamiento.
+
+
 
 
 
