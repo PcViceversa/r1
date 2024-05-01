@@ -1,4 +1,4 @@
-ELO324 : BASES DE DATOS
+INF239 : BASES DE DATOS
 
 --- --- --- --- --- --- --- --- ---
 --- --- --- --- --- --- --- --- ---
@@ -65,11 +65,21 @@ ENFOQUE
 
 BASE DE DATOS - COMPONENTES
 
-[01] BASE DE DATOS : infraestructura que da soporte al, conjunto de __DATO__ de carcter operacional.
+[01] BASE DE DATOS        : infraestructura que da soporte al, conjunto de __DATO__ de carcter operacional.
 
 [02] DICCIONARIO DE DATOS : infraestructura que da soporte al, conjunto de __DATO__ de carcter mas alla de lo operacional. Es decir __METADATOS__.
 
-[02] DICCIONARIO DE DATOS : infraestructura que da soporte al, conjunto de __DATO__ de carcter mas alla de lo operacional. Es decir __METADATOS__.
+[03] DBMS                 : software que permite crear y mantener una __BASE_DE_DATO__ a lo largo del tiempo.
+
+[04] PROGRAMAS DE APLICACION : software que permite interactuar con una __BASE_DE_DATO__ asiendo uso de ella. Es decir le brinda un proposito.
+
+[05] INTERFAZ DE USUARIO     : software que comunica el DBMS con un punto final. Es decir un usuario.
+
+[06] USUARIOS                : Puntos finales, consumidores de los servicios que una __BASE_DE_DATO__ da soporte.
+
+[06] HERRAMIENTA CASE        : Son todo el conjunto de software que sirve de ayuda y soporte adicional, en cada parte de una __BASE_DE_DATO__.
+
+DISEÑO DE BASE DE DATOS
 
 
 
