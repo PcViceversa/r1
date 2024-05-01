@@ -1,14 +1,7 @@
-ELO324 : LABRORATORIO DE RDPC_SO
+ELO324 : BASES DE DATOS
 
-. La **holal** ndsnds __ddsad__ *adad* adasndsan _sadaas_ asdsada ~~assdnasd~~
+CONCEPTOS
 
-* asdndnas
-* adsdsmadma
-* dsadsada
-  * dsadsada
-  * dsadsad
-  * sdada
-
-* dsadas
-* saddas
-
+    Un __RECURSO__ es cuya entidad posee un __COSTO__ y un __VALOR__
+    
+    [] Un __DATO__ es 
